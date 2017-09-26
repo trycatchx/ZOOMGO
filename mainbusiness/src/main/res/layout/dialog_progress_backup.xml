@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dialog_content_backgroud"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingTop="20dp" >
+
+    <TextView
+        android:id="@+id/dialog_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/airdisk_dialog_progress_text_color"
+        android:textSize="@dimen/airdisk_dialog_progress_mes_textsize" />
+
+     <RelativeLayout
+        android:id="@+id/layout_progress"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_dialog_backup_data_display"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/backup_default_icon" />
+
+        <ProgressBar
+            android:id="@+id/dialog_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dm_lib_wifi_ProgressBarHeight"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerHorizontal="true"
+            android:max="100"
+            android:progressDrawable="@drawable/storage_progress" />
+    </RelativeLayout>
+
+
+</LinearLayout>

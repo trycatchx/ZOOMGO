@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_contacts_backup_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llyt_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/head"
+            layout="@layout/common_title_bar" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llyt_title_bar"
+        android:descendantFocusability="afterDescendants"
+        android:divider="@null"
+        android:drawSelectorOnTop="true"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:scrollingCache="false" />
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/llyt_title_bar"
+        android:visibility="gone" >
+
+        <include layout="@layout/file_browse_common_loading" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/emptyRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/emptyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DM_Backup_Address_Records_NoRecords"
+            android:textColor="#7f000000"
+            android:textSize="14sp" />
+    </LinearLayout>
+    
+
+</RelativeLayout>

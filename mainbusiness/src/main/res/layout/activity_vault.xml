@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dm_lib_wifi_setting_bg_color"
+    >
+
+    <LinearLayout
+        android:id="@+id/llyt_vault_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <include layout="@layout/common_title_bar" >
+        </include>
+    </LinearLayout>
+
+    <FrameLayout  
+        android:layout_below="@id/llyt_vault_title"
+        android:id="@+id/llyt_valut_base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    </FrameLayout>
+
+</RelativeLayout>

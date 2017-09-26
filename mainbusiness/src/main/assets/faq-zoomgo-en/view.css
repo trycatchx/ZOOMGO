@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+html,body,div,ul,li{margin:0;padding:0;}
+ul,li{list-style:none;}
+body{min-width:320px;max-width:640px;margin:0 auto;background-color:#f0eff5;}
+.type-add-button{width:30%;margin:0 auto;margin-top:60px;text-align:center;height:64px;line-height:64px;background-color:#5dc5ec;color:#fff;font-size:20px;font-weight:400;}
+.type-add-list{border:1px solid #5dc5ec;width:90%;margin:0 auto;min-height:365px;}
+.common-list{background-color:#fff;}
+/* .common-list li{height:45px;line-height:45px;font-size:16px;border-bottom:1px solid #e1e1e1;color:#0a0a0a; background-image: url("images/list_right_arrow.png");background-position: 96% center;background-repeat: no-repeat;background-size: 20px 20px;cursor:pointer;width:95%;padding-left:5%;} */
+.common-list li{height:45px;line-height:45px;font-size:16px;border-bottom:1px solid #e1e1e1;color:#0a0a0a; background-position: 96% center;background-repeat: no-repeat;background-size: 20px 20px;cursor:pointer;width:95%;padding-left:5%;}
+.common-list li p span{display:block;float:left;}
+span.cname{width:65%;text-indent:1em;}
+span.cedit{width:10%;color:#00ccff;font-size:16px;cursor:pointer;}
+span.cdel{width:10%;color:#00ccff;font-size:16px;cursor:pointer;}
+span.chot{width:10%;color:#00ccff;font-size:16px;cursor:pointer;}
+p.hot-title{width:100%;margin:0 auto;line-height:50px;color:#959595;text-indent:5%;font-size:16px;}
+.hot-faq-list{background-color:#FFF;width:100%;display:inline-block;}
+.hot-faq-list li{width:95%;float:right;background-color:#FFF;}
+p.video_demo{width:85%;margin:0 auto;margin-top:28px;}
+p.hide{display:none;}
+.type-add-button{cursor:pointer;}
+#footer{height:40px;border-top:1px solid #b4b4b4;background-color:#f8f8fa;position:fixed;bottom:0;width:100%;max-width:640px;margin:0 auto;}
+#footer div{float:left;width:49%;height:21px;margin-top:9px;background-position:center;background-repeat: no-repeat;background-size: 80px 15px;}
+#footer div.one{background-image: url("images/all_faq_btn.png");border-right:1px solid #b4b4b4;}
+#footer div.two{background-image: url("images/feedback_btn.png");}
+.feedback-p span {height:80px;line-height:80px;color:#096ea4;font-size:16px;display:block;width:100px;margin:0 auto;}
+a{
+	 /* float:left; */
+     font-size:16px;
+     padding-left:1px; 
+     color:#0a0a0a;
+     text-decoration:none;
+     padding-top: 3px;
+}
+ 

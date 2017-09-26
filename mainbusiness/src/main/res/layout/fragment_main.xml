@@ -1,0 +1,167 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/head"
+            layout="@layout/common_title_bar" />
+
+        <LinearLayout
+            android:id="@+id/layout_dir"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/rl_navigate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <com.dmsys.airdiskpro.view.FolderSelector
+                    android:id="@+id/et_navigate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/folderselector_bkg"
+                    android:ellipsize="middle" />
+            </LinearLayout>
+
+            <include
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                layout="@layout/file_explorer"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <FrameLayout
+                android:id="@+id/fl_indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <com.viewpagerindicator.TabPageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="#e8eaeb" />
+            </FrameLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/tab_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_guide"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#aa363738"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:clipToPadding="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/titlebar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/main_blue"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/safeexit_btn_selector"
+                android:ellipsize="end"
+                android:gravity="left|center_vertical"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/DM_APP_Name"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_bar"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="88dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/arrow"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/DM_Safe_Exit_Tips"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/guide_bg_selector"
+            android:padding="8dp"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:text="@string/DM_Control_Know"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/cb_nomore"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_ok"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:alpha="0.7"
+            android:button="@drawable/dlg_checkbox_selector"
+            android:gravity="center_vertical"
+            android:buttonTint="@color/white"
+            android:textColor="@color/white"
+            android:text="@string/DM_Dialog_No_More_Warn" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ibtn_music"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/fab"
+        android:src="@drawable/music" />
+
+</FrameLayout>

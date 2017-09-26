@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlyt_upload_file_list_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="58dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp" >
+
+        <ImageView
+            android:id="@+id/fileexplorer_list_item_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="8dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bt_download_manager_other" />
+
+        <ImageView
+            android:id="@+id/fileexplorer_list_item_operatinobtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="14dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/sel_upload_choose" />
+
+        <RelativeLayout
+            android:id="@+id/rlyt_upload_file_context"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="14dip"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@id/fileexplorer_list_item_operatinobtn"
+            android:layout_toRightOf="@id/fileexplorer_list_item_icon" >
+
+            <TextView
+                android:id="@+id/fileexplorer_list_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="sdfsdf"
+                android:textColor="@color/DM_title_text_color"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/fileexplorer_list_item_size"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="bottom"
+                    android:text="sdfsdf"
+                    android:textColor="@color/DM_sub_title_text_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/fileexplorer_list_item_date"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:text=""
+                    android:textColor="@color/DM_sub_title_text_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/div_dot_line_hor"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="shuffle_title">随机模式</string>
+    <string name="repeat_title">重复模式</string>
+    <string name="DM_Vod_Toast_Key_Back_Quit">再次点击退出播放器</string>
+
+    <string name="DM_Srt_loading">加载中…</string>
+    <string name="DM_Srt_close">字幕关闭.</string>
+    <string name="DM_Subtitle">字幕列表</string>
+    <string name="DM_Subtitle_place">字幕位置</string>
+    <string name="DM_Subtitle_up">上</string>
+    <string name="DM_Subtitle_down">下</string>
+    <string name="DM_Subtitle_size">文字大小</string>
+    <string name="DM_Srt_no_file">无可用字幕.</string>
+
+</resources>

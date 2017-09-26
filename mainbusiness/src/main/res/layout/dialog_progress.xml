@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dialog_content_backgroud"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+    android:paddingTop="30dp" >
+
+    <LinearLayout
+            android:id="@+id/llyt_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:ellipsize="middle"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/DM_File_Operate_Filename1"
+            android:textColor="@color/airdisk_dialog_progress_text_color"
+            android:textSize="@dimen/airdisk_dialog_progress_mes_textsize" />
+
+        <TextView
+            android:id="@+id/tv_pg_dg_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:ellipsize="middle"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/airdisk_dialog_progress_text_color"
+            android:textSize="@dimen/airdisk_dialog_progress_mes_textsize" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/llyt_left_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="left"
+            android:maxLines="1"
+            android:text="@string/DM_File_Operate_Remain_Time1"
+            android:textColor="@color/airdisk_dialog_progress_text_color"
+            android:textSize="@dimen/airdisk_dialog_progress_mes_textsize" />
+
+        <TextView
+            android:id="@+id/tv_pg_dg_time_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:ellipsize="middle"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/airdisk_dialog_progress_text_color"
+            android:textSize="@dimen/airdisk_dialog_progress_mes_textsize"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/llyt_left_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:ellipsize="middle"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/DM_File_Operate_Remain_Items2"
+            android:textColor="@color/airdisk_dialog_progress_text_color"
+            android:textSize="@dimen/airdisk_dialog_progress_mes_textsize" />
+
+        <TextView
+            android:id="@+id/tv_pg_dg_number_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:ellipsize="middle"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/airdisk_dialog_progress_text_color"
+            android:textSize="@dimen/airdisk_dialog_progress_mes_textsize"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llyt_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:ellipsize="middle"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/DM_File_Operate_Speed1"
+            android:textColor="@color/airdisk_dialog_progress_text_color"
+            android:textSize="@dimen/airdisk_dialog_progress_mes_textsize" />
+
+        <TextView
+            android:id="@+id/tv_pg_dg_speed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:ellipsize="middle"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/airdisk_dialog_progress_text_color"
+            android:textSize="@dimen/airdisk_dialog_progress_mes_textsize"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyt_dg_pg"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp" >
+
+        <TextView
+            android:id="@+id/dialog_progress_num"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="0%"
+            android:textColor="@color/airdisk_dialog_progress_text_color"
+            android:textSize="16sp" />
+
+        <com.dmsys.airdiskpro.view.DMProgress
+            android:id="@+id/dialog_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm_lib_wifi_ProgressBarHeight"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@id/dialog_progress_num"
+            android:progressDrawable="@drawable/storage_progress" />
+    </RelativeLayout>
+
+</LinearLayout>

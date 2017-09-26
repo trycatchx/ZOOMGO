@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/vod_player_right_bar_bg" >
+
+    <RelativeLayout
+        android:id="@+id/layout_show"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/DM_Subtitle"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/ib_toogle"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/togglebutton_close" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llyt_vod_pop_sub_srt_position"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/DM_Subtitle_place"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/subtitle_up"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:gravity="center_vertical" >
+
+            <SeekBar
+                android:id="@+id/vod_player_srt_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:clickable="false"
+                android:enabled="false"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:progress="15"
+                android:progressDrawable="@drawable/vod_player_seekbar_style"
+                android:thumb="@drawable/vod_player_seekbar_thumb_selector"
+                android:thumbOffset="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/vod_player_srt_seekbar"
+                android:layout_marginLeft="12dp"
+                android:singleLine="true"
+                android:text="@string/DM_Subtitle_down"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/vod_player_srt_seekbar"
+                android:layout_marginRight="12dp"
+                android:singleLine="true"
+                android:text="@string/DM_Subtitle_up"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llyt_vod_pop_sub_srt_size"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_above="@id/llyt_vod_pop_sub_srt_position"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/DM_Subtitle_size"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_size_small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/bg_btn_size_small_selector" />
+
+            <ImageView
+                android:id="@+id/iv_size_large"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:src="@drawable/bg_btn_size_large_selector" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_pop_srt_choose"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/llyt_vod_pop_sub_srt_size"
+        android:layout_below="@id/layout_show"
+        android:layout_gravity="center_vertical"
+        android:cacheColorHint="#00000000"
+        android:clickable="true"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:listSelector="@drawable/bg_srt_selector"
+        android:overScrollMode="never" >
+    </ListView>
+
+   <!--  <RelativeLayout
+        android:id="@+id/rlyt_srt_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ProgressBar
+            android:id="@+id/pb_srt_onoff"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:indeterminate="true"
+            android:indeterminateBehavior="cycle"
+            android:indeterminateDrawable="@drawable/vod_player_srt_loading_animation"
+            android:indeterminateDuration="1"
+            android:interpolator="@android:anim/linear_interpolator" />
+
+        <TextView
+            android:id="@+id/tv_choose_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pb_srt_onoff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:text="@string/DM_Srt_close"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:visibility="visible" >
+        </TextView>
+    </RelativeLayout> -->
+
+</RelativeLayout>

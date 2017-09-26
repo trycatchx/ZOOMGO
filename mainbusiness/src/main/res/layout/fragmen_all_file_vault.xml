@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/head"
+            layout="@layout/common_title_bar" />
+
+        <LinearLayout
+            android:id="@+id/layout_dir"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <com.dmsys.airdiskpro.view.FolderSelector
+                android:id="@+id/et_navigate"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/folderselector_bkg"
+                android:ellipsize="middle" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <View
+                        android:id="@+id/occupyView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="48dp"
+                        android:layout_alignParentBottom="true"
+                        android:visibility="gone"
+                        android:background="@color/file_view_bkg_color" />
+                    <com.dmsys.airdiskpro.view.VaultAllFileView
+                        android:id="@+id/lv_file_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_above="@id/occupyView"
+                        android:background="@color/file_view_bkg_color"
+                        android:cacheColorHint="#00000000"
+                        android:divider="@drawable/div_dot_line_hor"
+                        android:dividerHeight="1dp"
+                        android:fadingEdge="none"
+                        android:listSelector="@drawable/file_list_item_selector"
+                        android:scrollbars="vertical"
+                        android:scrollingCache="false" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/loading"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/file_view_bkg_color"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <ProgressBar
+                        style="@android:style/Widget.ProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="false"
+                        android:indeterminateDrawable="@drawable/loading_folder_draw" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:text="@string/DM_Remind_Loading"
+                        android:textColor="#ff999999"
+                        android:textSize="12.0sp" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <include layout="@layout/valut_bottom_guide_bar" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ibtn_music"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/fab"
+        android:src="@drawable/music" />
+
+</FrameLayout>

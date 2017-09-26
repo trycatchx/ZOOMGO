@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlyt_srt_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:visibility="visible" >
+
+    <ProgressBar
+        android:id="@+id/pb_srt_onoff"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:indeterminateDrawable="@drawable/vod_player_srt_loading_animation"
+        android:indeterminateDuration="1"
+        android:interpolator="@android:anim/linear_interpolator" />
+
+    <TextView
+        android:id="@+id/tv_choose_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pb_srt_onoff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:text="@string/DM_Srt_close"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="visible" >
+    </TextView>
+
+</RelativeLayout>

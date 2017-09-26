@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dm_lib_wifi_SettingActivityBody">
+
+    <include layout="@layout/common_title_bar" />
+
+    <TextView
+        style="@style/help_step_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/DM_Device_Wifi_Status"
+        android:textColor="@color/dm_lib_wifi_setting_textview_color"
+        android:textSize="@dimen/dm_lib_wifi_RightTextTitleTextSize" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/settings_group_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/EntryBorderWidth">
+
+                <RelativeLayout
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor_top"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/DM_Device_AP_SSID"
+                        android:textColor="@color/DM_sub_title_text_color" />
+
+                    <TextView
+                        android:id="@+id/text_wifi_ssid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/DM_sub_title_text_color" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_no_roundcornor"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/DM_Device_AP_Ipaddress"
+                        android:textColor="@color/DM_sub_title_text_color" />
+
+                    <TextView
+                        android:id="@+id/text_wifi_ip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/DM_sub_title_text_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor_down"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/DM_Device_AP_MAC"
+                        android:textColor="@color/DM_sub_title_text_color" />
+
+                    <TextView
+                        android:id="@+id/text_wifi_mac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/DM_sub_title_text_color" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/help_step_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/DM_Device_Network_Status"
+                android:textColor="@color/dm_lib_wifi_setting_textview_color"
+                android:textSize="@dimen/dm_lib_wifi_RightTextTitleTextSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/settings_group_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/EntryBorderWidth">
+
+                <RelativeLayout
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor_top"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/DM_Device_Network_SSID"
+                        android:textColor="@color/DM_sub_title_text_color" />
+
+                    <TextView
+                        android:id="@+id/text_remote_ssid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/DM_sub_title_text_color" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_no_roundcornor"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/DM_Device_Network_Ipaddress"
+                        android:textColor="@color/DM_sub_title_text_color" />
+
+                    <TextView
+                        android:id="@+id/text_remote_ip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/DM_sub_title_text_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor_down"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/DM_Device_Network_MAC"
+                        android:textColor="@color/DM_sub_title_text_color" />
+
+                    <TextView
+                        android:id="@+id/text_remote_mac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/DM_sub_title_text_color" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+    

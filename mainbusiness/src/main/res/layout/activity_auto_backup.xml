@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/common_title_bar" />
+
+    <TextView
+        android:id="@+id/text_left"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="" />
+    
+    <RelativeLayout
+        android:id="@+id/layout_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:visibility="visible" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/auto_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_progress"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_backup"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/backup_default_icon" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dm_lib_wifi_ProgressBarHeight"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerHorizontal="true"
+            android:max="100"
+            android:progressDrawable="@drawable/storage_progress" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/backup_btn_bg_selector"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/DM_Backup_Start_Button"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/layout_auto"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/backup_hover"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/cb_auto"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:button="@drawable/backup_checkbox_selector"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text="@string/DM_Backup_Select_Auto"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_album_backup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/sel_phone_backup_item" >
+
+            <RelativeLayout
+                android:id="@+id/layout_album"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp" >
+
+                <CheckBox
+                    android:id="@+id/cb_album"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:button="@drawable/backup_checkbox_selector"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/cb_album"
+                    android:text="@string/DM_Backup_Album_Title"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_select_album"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/layout_album"
+                android:background="@drawable/dm_lib_dialog_btn_roundcornor_down"
+                android:visibility="gone" >
+
+                <View
+                    android:id="@+id/divider_album_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#dcddda" />
+                
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:src="@drawable/date_updateload_to" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@id/divider_album_line"
+                    android:layout_toLeftOf="@id/arrow"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp" >
+
+                    <TextView
+                        android:id="@+id/text_album_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:singleLine="true"
+                        android:text="@string/DM_Backup_Album_Select_Title"
+                        android:textColor="@color/DM_title_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_album_title"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/DM_Backup_Album_Select_Remind"
+                        android:textColor="@color/DM_title_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_contacts_backup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/sel_phone_backup_item" >
+
+            <RelativeLayout
+                android:id="@+id/layout_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp" >
+
+                <CheckBox
+                    android:id="@+id/cb_contacts"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:button="@drawable/backup_checkbox_selector"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/cb_contacts"
+                    android:text="@string/DM_Backup_Address_Title"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_select_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/layout_contacts"
+                android:background="@drawable/dm_lib_dialog_btn_roundcornor_down"
+                android:visibility="visible" >
+
+                <View
+                    android:id="@+id/divider_contacts_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#dcddda" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@id/divider_contacts_line"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp" >
+
+                    <TextView
+                        android:id="@+id/text_contacts_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:singleLine="true"
+                        android:text="@string/DM_Backup_Address_Records_Title"
+                        android:textColor="@color/DM_title_text_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_contacts_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_contacts_title"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/DM_Backup_Last_C_Bak_Time"
+                        android:textColor="@color/DM_title_text_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:gravity="right"
+                    android:src="@drawable/date_updateload_to" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.1"
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DM_Backup_Remind"
+            android:textColor="@color/DM_title_text_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_backfolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="airdisk/来自vivo的备份"
+            android:textColor="@color/main_blue"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

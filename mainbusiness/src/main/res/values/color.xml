@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+	<color name="white">#FFFFFF</color>
+	<color name="main_blue">#0086D1</color>
+	<color name="DM_title_text_color">#333333</color>
+	<color name="DM_sub_title_text_color">#666666</color>
+    <color name="file_view_bkg_color">#fafafa</color>
+    <color name="file_item_select">#e9ecee</color>
+    <color name="file_item_name_color">#494949</color>
+    <color name="file_item_others_color">#999999</color>
+    <color name="welcome_text_color">#D0F0FC</color>
+    <color name="color_sliding_menu_text">#ffffff</color>  
+    <color name="color_sliding_menu_item_bg_pressed">#aaffffff</color>  
+    <color name="color_sliding_sub_menu_text">#dcdcdc</color>  
+    <color name="dm_lib_layout_title_bg">#2d2f33</color> 
+    <color name="airdisk_guide_text_normal">#00000000</color> 
+    <color name="table_text_selected">#333333</color>
+    <color name="table_text_not_selected">#333333</color>
+	<color name="dialog_progress_text">#333333</color>
+	<color name="album_backup_selected_color">#771f1f1f</color>
+	<color name="color_contacts_backup_bg">#f3f3f3</color>
+	<color name="color_contacts_history_text">#666666</color>
+	<color name="EntryBorderColor">#FFFFFFFF</color>
+	<color name="submit_enable_txt_color">#FFFFFFFF</color>
+    <color name="submit_disable_txt_color">#757575</color>
+    <color name="image_group_title">#494949</color>
+    
+    <!--dropbox  -->
+     <color name="dropbox_prog_green">#FFBB00</color>
+         <color name="dropbox_file_view_bkg_color">#fafafa</color>
+             <color name="dropbox_file_item_select">#e9ecee</color>
+             
+              <!-- 红紫色 -->
+    <color name="dm_lib_red">#FF0000</color>
+     <color name="dm_lib_whitesmoke">#F5F5F5</color>
+     <color name="dm_feedback_email_color">#800080</color>
+
+</resources>

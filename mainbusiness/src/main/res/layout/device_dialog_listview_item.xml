@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:background="@drawable/airdisk_dialog_btn_bg_selector_temp" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/guide_udisk_normal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_device_dialog_listview_item_ssid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="asklflasjflasjf;l"
+            android:textColor="@drawable/guide_text_selector"
+            android:textSize="@dimen/airdisk_dialog_title_textsize" />
+
+        <TextView
+            android:id="@+id/tv_device_dialog_listview_item_ip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="3dp"
+            android:text="sdklfjlsdkfj"
+            android:textColor="@drawable/guide_text_selector"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

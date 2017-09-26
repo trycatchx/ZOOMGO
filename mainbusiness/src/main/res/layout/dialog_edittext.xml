@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/dialog_content_backgroud" >
+
+    <com.dm.xunlei.udisk.Network.View.EditTextButtonView
+        android:id="@+id/et_content"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dm_lib_wifi_EditTextHeight"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/airdisk_dialog_edittext_bg"
+        android:minHeight="@dimen/airdisk_dialog_edittext_height"
+        android:textColor="@color/airdisk_dialog_edittext_color"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/text_warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/dm_lib_red"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/et_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@drawable/table_text_color_selector"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/common_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/layout_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dm_lib_wifi_WifiListViewTopPadding"
+        android:paddingLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+        android:paddingRight="@dimen/dm_lib_wifi_WifiListViewRightPadding" >
+
+        <com.dm.xunlei.udisk.Network.View.CustomButtonView1
+              android:layout_margin="3dp"
+            android:id="@+id/cbv_hide"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm_lib_wifi_WifiListViewItemHeight"
+            android:layout_marginTop="@dimen/dm_lib_wifi_WifiListViewTopPadding"
+            android:background="@drawable/settings_group_bg_small_round"
+            android:padding="3dp" />
+          
+
+        <TextView
+            style="@style/SettingSubTitle"
+            android:paddingTop="3dp"
+            android:text="@string/DM_Setting_Show_Hidden_Caption" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_mount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dm_lib_wifi_WifiListViewTopPadding"
+        android:paddingLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+        android:paddingRight="@dimen/dm_lib_wifi_WifiListViewRightPadding" >
+
+        <com.dm.xunlei.udisk.Network.View.CustomButtonView1
+            android:id="@+id/cbv_mount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm_lib_wifi_WifiListViewItemHeight"
+            android:layout_marginTop="@dimen/dm_lib_wifi_WifiListViewTopPadding"
+            android:background="@drawable/settings_group_bg_small_round"
+            android:padding="3dp"
+             />
+
+        <TextView
+            style="@style/SettingSubTitle"
+            android:paddingTop="3dp"
+            android:text="@string/DM_Setting_PC_USB_Caption" />
+    </LinearLayout>
+
+    <!-- 高级设置 -->
+
+    <RelativeLayout
+        android:id="@+id/sett_advance_layout"
+        style="@style/SettingCell"
+        android:visibility="gone"
+        android:background="@drawable/settings_group_bg_small_round"
+        android:paddingBottom="@dimen/dm_lib_wifi_WifiListViewTopPadding"
+        android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+        android:layout_marginRight="@dimen/dm_lib_wifi_WifiListViewRightPadding" >
+
+        <LinearLayout
+            style="@style/SettingHorizontalTexts"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:duplicateParentState="true" >
+
+            <TextView
+                android:id="@+id/www_wifi_text"
+                style="@style/SettingTitle"
+                android:clickable="false"
+                android:text="@string/DM_Advanced_Title" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/SettingHorizontalRightTexts"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:duplicateParentState="true" >
+
+            <TextView
+                android:id="@+id/www_wifi_chooser"
+                style="@style/SettingSubTitle"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text=""
+                android:visibility="gone" />
+
+            <Button
+                style="@style/SettingRightButton"
+                android:background="@drawable/go_selector"
+                android:clickable="false" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

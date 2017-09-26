@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_guide_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/layout_bottom_connectdevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/layout_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/guide_bg_selector"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/upload_btn_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/DM_Bottom_Bar_Button_Upload"
+                android:textColor="@drawable/guide_text_selector"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/layout_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/text_type"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/folderselector_bkg"
+                    android:drawableTop="@drawable/guide_type_selector"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="@string/DM_Navigation_Airdisk_Categories"
+                    android:textColor="@drawable/guide_text_selector" />
+                <TextView
+                    android:id="@+id/text_dir"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/folderselector_bkg"
+                    android:drawableTop="@drawable/guide_dir_selector"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="@string/DM_Navigation_Airdisk_Catalogue"
+                    android:textColor="@drawable/guide_text_selector" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/guide_upload_default" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_nodevice"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/guide_bg_selector"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/layout_menu"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/menu"
+            android:gravity="center"
+            android:text="@string/DM_Bottom_Bar_Button_Menu"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/layout_download"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/mydownload_btn_selector"
+            android:gravity="center"
+            android:text="@string/DM_Bottom_Bar_Button_MyDowmloads"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/common_title_bar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f3f3f3"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:id="@+id/layout_device"
+                style="@style/SettingCell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/settings_group_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/EntryBorderWidth"
+                android:visibility="gone">
+
+                <!-- wifi热点设置 -->
+                <LinearLayout
+                    android:id="@+id/layout_wifi"
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor_top"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        style="@style/SettingVerticalTexts"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:duplicateParentState="true">
+
+                        <TextView
+                            android:id="@+id/tv_hot_point_setting_text"
+                            style="@style/SettingTitle"
+                            android:text="@string/DM_Set_WiFi_Setting" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/udisk_wifi_chooser"
+                        style="@style/SettingSubTitle"
+                        android:ellipsize="middle"
+                        android:singleLine="true"
+                        android:text="@string/DM_Sidebar_Unconnect"
+                        android:visibility="gone" />
+
+                    <Button
+                        style="@style/SettingRightButton"
+                        android:background="@drawable/go_selector" />
+                </LinearLayout>
+
+                <!--设备保险库设置  -->
+                <RelativeLayout
+                    android:id="@+id/layout_password"
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/sett_enterPassword"
+                        style="@style/SettingTitle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/DM_Setting_Secure" />
+
+                    <LinearLayout
+                        style="@style/SettingHorizontalRightTexts"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:duplicateParentState="true">
+
+                        <Button
+                            style="@style/SettingRightButton"
+                            android:background="@drawable/go_selector" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- 设备状态信息-->
+                <RelativeLayout
+                    android:id="@+id/bt_sett_info_layout"
+                    style="@style/SettingCell"
+                    android:layout_marginTop="@dimen/EntryBorderWidth"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor_down"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/bt_sett_info"
+                        style="@style/SettingTitle"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/DM_Device_Info" />
+
+                    <Button
+                        style="@style/SettingRightButton"
+                        android:background="@drawable/go_selector" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/settings_group_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/EntryBorderWidth">
+
+                <RelativeLayout
+                    android:id="@+id/sett_cacheclear_layout"
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor">
+
+                    <TextView
+                        android:id="@+id/sett_cacheclear"
+                        style="@style/SettingTitle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/DM_Set_Clear_Cache" />
+
+                    <LinearLayout
+                        style="@style/SettingHorizontalRightTexts"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:duplicateParentState="true">
+
+                        <TextView
+                            android:id="@+id/sett_cacheclear_size"
+                            style="@style/SettingSubTitle"
+                            android:ellipsize="middle"
+                            android:singleLine="true"
+                            android:text="0B" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_net"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/settings_group_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/EntryBorderWidth"
+                android:visibility="visible">
+                <!-- App升级 -->
+                <LinearLayout
+                    android:id="@+id/bt_sett_about_check_update_layout"
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor_top"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        style="@style/SettingVerticalTexts"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:duplicateParentState="true">
+
+                        <TextView
+                            style="@style/SettingTitle"
+                            android:text="@string/DM_Set_Check_APP_Update" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 固件升级 -->
+
+                <RelativeLayout
+                    android:id="@+id/sett_fw_update"
+                    style="@style/SettingCell"
+                    android:layout_marginTop="@dimen/EntryBorderWidth"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor_down"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/SettingTitle"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/DM_setting_otaupgrade" />
+
+                    <LinearLayout
+                        style="@style/SettingHorizontalRightTexts"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:duplicateParentState="true">
+
+                        <ImageView
+                            android:id="@+id/iv_setting_fw_new_version_notify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/fw_new_version_notify"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- 反馈意见 -->
+
+                <RelativeLayout
+                    android:id="@+id/bt_sett_feedback_layout"
+                    style="@style/SettingCell"
+                    android:layout_marginTop="@dimen/EntryBorderWidth"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor_down"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/bt_sett_feedback"
+                        style="@style/SettingTitle"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/DM_Set_Feedback" />
+
+                    <ImageView
+                        style="@style/SettingRightButton"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/go_selector" />
+                </RelativeLayout>
+                <!-- faq  -->
+                <RelativeLayout
+                    android:id="@+id/bt_sett_faq_layout"
+                    style="@style/SettingCell"
+                    android:layout_marginTop="@dimen/EntryBorderWidth"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor_down"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/bt_sett_faq"
+                        style="@style/SettingTitle"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/DM_Sidebar_HelpCenter" />
+
+                    <ImageView
+                        style="@style/SettingRightButton"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/go_selector" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/settings_group_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/EntryBorderWidth"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/sett_more_layout"
+                    style="@style/SettingCell"
+                    android:background="@drawable/dm_lib_dialog_btn_roundcornor">
+
+                    <TextView
+                        android:id="@+id/sett_more"
+                        style="@style/SettingTitle"
+                        android:layout_centerVertical="true"
+                        android:text="@string/DM_Setting_More" />
+
+                    <Button
+                        style="@style/SettingRightButton"
+                        android:background="@drawable/go_selector" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

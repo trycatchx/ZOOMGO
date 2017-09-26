@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_choose_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:ellipsize="end"
+    android:gravity="center_vertical"
+    android:lines="3"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:text="sdfsdf"
+    android:textColor="@drawable/srt_color_seletor"
+    android:textSize="13sp" >
+
+</TextView>

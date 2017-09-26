@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/dialog_content_backgroud"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/iv_dialog_attribute_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:layout_marginLeft="@dimen/airdisk_dialog_attribute_item_margin_left"
+            android:layout_marginRight="@dimen/airdisk_dialog_attribute_item_margin_right"
+            android:layout_marginTop="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:scaleType="center"
+            android:src="@drawable/bt_download_manager_text" />
+
+        <TextView
+            android:id="@+id/tv_dialog_attribute_name"
+            android:layout_width="@dimen/airdisk_dialog_attribute_textcontent_maxwidth"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:layout_marginRight="@dimen/airdisk_dialog_attribute_item_margin_left"
+            android:layout_marginTop="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:layout_toRightOf="@id/iv_dialog_attribute_icon"
+            android:maxWidth="@dimen/airdisk_dialog_attribute_textcontent_maxwidth"
+            android:textColor="@color/airdisk_dialog_attribute_text_color"
+            android:textSize="@dimen/airdisk_dialog_attribute_textsize" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/airdisk_dialog_divide_line" />
+
+    <TextView
+        android:id="@+id/tv_dialog_attribute_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/airdisk_dialog_attribute_item_margin_top"
+        android:layout_marginLeft="@dimen/airdisk_dialog_attribute_item_margin_left"
+        android:layout_marginRight="@dimen/airdisk_dialog_attribute_item_margin_left"
+        android:layout_marginTop="@dimen/airdisk_dialog_attribute_item_margin_top"
+        android:text="那啥"
+        android:textColor="@color/airdisk_dialog_attribute_text_color"
+        android:textSize="@dimen/airdisk_dialog_attribute_textsize" />
+
+    <RelativeLayout
+        android:id="@+id/layout_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/airdisk_dialog_attribute_item_margin_left"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_attr_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:layout_marginLeft="@dimen/airdisk_dialog_attribute_item_margin_left"
+            android:layout_marginRight="@dimen/airdisk_dialog_attribute_item_margin_left"
+            android:text="@string/DM_More_Detail_Copy_Button"
+            android:textColor="@drawable/airdisk_dialog_btn_textcolor_selector_copy"
+            android:textSize="@dimen/airdisk_dialog_attribute_textsize" />
+        
+         <TextView
+            android:id="@+id/tv_temp_attribute_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:text="@string/DM_More_Detail_Path"
+            android:textColor="@color/airdisk_dialog_attribute_text_color"
+            android:textSize="@dimen/airdisk_dialog_attribute_textsize" />
+
+        <TextView
+            android:id="@+id/tv_dialog_attribute_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:layout_toLeftOf="@id/tv_attr_copy"
+            android:layout_toRightOf="@id/tv_temp_attribute_path"
+            android:gravity="left"
+            android:textColor="@color/airdisk_dialog_attribute_text_color"
+            android:textSize="@dimen/airdisk_dialog_attribute_textsize" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_dialog_attribute_size"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/airdisk_dialog_attribute_item_margin_top"
+        android:layout_marginLeft="@dimen/airdisk_dialog_attribute_item_margin_left"
+        android:layout_marginTop="@dimen/airdisk_dialog_attribute_item_margin_top"
+        android:textColor="@color/airdisk_dialog_attribute_text_color"
+        android:textSize="@dimen/airdisk_dialog_attribute_textsize" />
+
+    <TextView
+        android:id="@+id/tv_dialog_attribute_contain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/airdisk_dialog_attribute_item_margin_top_multiply2"
+        android:layout_marginLeft="@dimen/airdisk_dialog_attribute_item_margin_left"
+        android:layout_marginTop="@dimen/airdisk_dialog_attribute_item_margin_top"
+        android:textColor="@color/airdisk_dialog_attribute_text_color"
+        android:textSize="@dimen/airdisk_dialog_attribute_textsize" />
+
+    <RelativeLayout
+        android:id="@+id/layout_modify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/devide"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/airdisk_dialog_divide_line" />
+
+        <TextView
+            android:id="@+id/tv_temp_lastmodify_time"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/devide"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:layout_marginLeft="@dimen/airdisk_dialog_attribute_item_margin_left"
+            android:layout_marginRight="@dimen/airdisk_dialog_attribute_item_margin_right"
+            android:layout_marginTop="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:text="@string/DM_More_Detail_LastTime"
+            android:textColor="@color/airdisk_dialog_attribute_text_color"
+            android:textSize="@dimen/airdisk_dialog_attribute_textsize" />
+
+        <TextView
+            android:id="@+id/tv_dialog_attribute_lastmodify_time"
+            android:layout_width="@dimen/airdisk_dialog_attribute_textcontent_maxwidth"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/devide"
+            android:layout_marginBottom="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="@dimen/airdisk_dialog_attribute_item_margin_left"
+            android:layout_marginTop="@dimen/airdisk_dialog_attribute_item_margin_top"
+            android:layout_toRightOf="@+id/tv_temp_lastmodify_time"
+            android:text=""
+            android:textColor="@color/airdisk_dialog_attribute_text_color"
+            android:textSize="@dimen/airdisk_dialog_attribute_textsize" />
+    </RelativeLayout>
+
+</LinearLayout>

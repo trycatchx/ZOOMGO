@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+     <com.handmark.pulltorefresh.library.PullToRefreshListView
+         android:id="@+id/list"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@color/file_view_bkg_color"
+         android:cacheColorHint="#00000000"
+         android:divider="@null"
+         android:fadingEdge="none"
+         android:focusableInTouchMode="true"
+         android:listSelector="@drawable/file_list_item_selector"
+         android:scrollbars="vertical"
+         android:scrollingCache="false" />
+
+    <LinearLayout
+        android:id="@+id/emptyRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/emptyImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list_empty_icon" />
+
+        <TextView
+            android:id="@+id/emptyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/DM_No_File"
+            android:textColor="#7f000000"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</FrameLayout>

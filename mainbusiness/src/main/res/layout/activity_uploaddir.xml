@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/llyt_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <com.dmsys.airdiskpro.view.FileActionView
+            android:id="@+id/title_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_navigate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llyt_title_bar" >
+
+        <com.dmsys.airdiskpro.view.FolderSelector
+            android:id="@+id/et_navigate"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/folderselector_bkg"
+            android:ellipsize="middle" />
+    </LinearLayout>
+
+    <include layout="@layout/list_empty" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/rl_navigate" >
+
+        <com.dmsys.airdiskpro.view.UploadDirView
+            android:id="@+id/lv_file_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fafafa"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/div_dot_line_hor"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/file_list_item_selector"
+            android:scrollbars="vertical"
+            android:scrollingCache="false" />
+
+        <LinearLayout
+            android:id="@+id/llyt_date_pic_upload_to"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <include layout="@layout/file_browse_date_pic_commom_buttom_upload_to" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rl_navigate"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <include layout="@layout/file_browse_common_loading" />
+    </LinearLayout>
+
+</RelativeLayout>

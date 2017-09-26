@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.VLC.Player" parent="Theme.VLC.Player.7"/>
+
+    <style name="Theme.VLC.Player.7" parent="Theme.AppCompat">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+</resources>

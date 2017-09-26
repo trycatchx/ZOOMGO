@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingRight="14dp" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/div_dot_line_hor" />
+
+    <ImageView
+        android:id="@+id/iv_playing"
+        android:layout_width="6dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:background="@color/dm_lib_wifi_listview_head_color"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <!-- icon -->
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dip"
+        android:layout_toRightOf="@id/iv_playing"
+        android:scaleType="centerCrop" />
+
+    <!-- 箭头 -->
+
+    <ImageView
+        android:id="@+id/img_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/go_selector"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
+
+    <!-- 文件信息描述 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/cb_file"
+        android:layout_toRightOf="@id/iv_icon" >
+
+        <TextView
+            android:id="@+id/tv_file_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="aaa"
+            android:textColor="@color/file_item_name_color"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_file_name"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_file_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1989"
+                android:textColor="@color/file_item_others_color" />
+            
+            <TextView
+                android:id="@+id/tv_file_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:text="/mnt"
+                android:textColor="@color/file_item_others_color" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

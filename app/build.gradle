@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.zoomgomedia.app"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 21
+        versionName "1.0.6.21"
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi"//编译支持的平台
+        }
+    }
+
+  
+
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+       
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    packagingOptions {
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/armeabi/libc++_shared.so'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/beans.xml'
+    }
+
+
+
+    dexOptions {
+        maxProcessCount 4 // this is the default value
+        javaMaxHeapSize "2g"
+        preDexLibraries = false
+    }
+    //后面到达65K可以加上
+    afterEvaluate {
+        tasks.matching {
+            it.name.startsWith('dex')
+        }.each { dx ->
+            if (dx.additionalParameters == null) {
+                dx.additionalParameters = []
+            }
+            dx.additionalParameters += '--multi-dex'
+            dx.additionalParameters += "--main-dex-list=$projectDir/multidex.keep".toString()
+        }
+    }
+}
+
+
+
+repositories {
+    flatDir {
+        dirs 'libs','../vlcplayer/libs','../mainbusiness/libs'
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    compile project(':vlcplayer')
+    compile project(':mainbusiness')
+}
+

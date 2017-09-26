@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/file_view_bkg_color" >
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/common_title_bar" />
+    
+      <include
+       android:id="@+id/bottom"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+	   layout="@layout/bottom_action_bar"
+	   android:layout_alignParentBottom="true"
+	   android:visibility="gone" /> 
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head"
+        android:layout_above="@id/bottom" >
+
+        <ListView
+            android:id="@+id/folder_image_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/file_view_bkg_color"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="2dp"
+            android:fadingEdge="none"
+            android:focusableInTouchMode="true"
+            android:listSelector="@drawable/file_list_item_selector"
+            android:scrollbars="vertical"
+            android:scrollingCache="false" />
+        
+        <com.dmsys.airdiskpro.view.PicTitleView
+            android:id="@+id/tv_floder_image_title"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/file_view_bkg_color"
+            android:gravity="center_vertical"
+            android:textColor="@color/image_group_title"
+            android:textSize="15sp"
+            android:visibility="visible"
+            android:clickable="true" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            layout="@layout/bottom_action_bar"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/emptyRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/file_view_bkg_color"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/emptyImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/list_empty_icon" />
+
+            <TextView
+                android:id="@+id/emptyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/DM_No_File"
+                android:textColor="#7f000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/file_view_bkg_color"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:indeterminateDrawable="@drawable/loading_folder_draw" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/DM_Remind_Loading"
+                android:textColor="#ff999999"
+                android:textSize="12.0sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dm_lib_wifi_setting_bg_color"
+    android:orientation="vertical" >
+
+    <com.dm.xunlei.udisk.Network.View.CustomButtonView1
+        android:id="@+id/cbv_vault_switch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm_lib_wifi_WifiListViewItemHeight"
+        android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+        android:layout_marginRight="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+        android:layout_marginTop="@dimen/dm_lib_wifi_WifiListViewTopPadding"
+        android:background="@drawable/settings_group_bg_small_round"
+        android:padding="3dp" />
+
+    <TextView
+        android:id="@+id/tv_vault_switch_tips"
+        style="@style/dm_lib_wifi_SettingNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+        android:layout_marginRight="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+        android:layout_marginTop="@dimen/dm_lib_wifi_SettingNoteMarginTop"
+        android:text="@string/DM_Access_Password_Set_Caption" />
+
+    <LinearLayout
+        android:id="@+id/llyt_vault_reset_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+        android:layout_marginRight="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+        android:layout_marginTop="@dimen/dm_lib_wifi_SettingNoteMarginTop"
+        android:background="@drawable/settings_group_bg"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rlyt_vault_password_reset"
+            style="@style/SettingCell"
+            android:layout_marginTop="@dimen/EntryBorderWidth"
+            android:background="@drawable/dm_lib_dialog_btn_roundcornor" >
+
+            <TextView
+                android:id="@+id/tv_vault_setting"
+                style="@style/SettingTitle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/DM_Set_SecureVault_Password_Reset" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llyt_vault_create_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+                android:layout_marginTop="@dimen/dm_lib_wifi_SettingNoteMarginTop"
+                android:text="@string/DM_Set_SecureVault_Password_Create"
+                android:textColor="@color/dm_lib_wifi_setting_textview_color"
+                android:textSize="@dimen/dm_lib_wifi_RightTextTitleTextSize" />
+
+            <RelativeLayout
+                android:id="@+id/rl_errornote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+                android:layout_marginRight="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+                android:layout_marginTop="@dimen/dm_lib_wifi_SettingNoteMarginTop"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/iv_errornote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/dm_lib_wifi_errornote"
+                    android:scaleType="center" />
+
+                <TextView
+                    android:id="@+id/tv_errornote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dm_lib_wifi_ErrorNoteMarginLeft"
+                    android:layout_toRightOf="@+id/iv_errornote"
+                    android:text="@string/DM_SetUI_Pwd_Cant_Less_Then_8"
+                    android:textColor="@color/dm_lib_wifi_error_note_text_"
+                    android:textSize="@dimen/dm_lib_wifi_ErrorNoteTextSize" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginRight="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginTop="@dimen/dm_lib_wifi_WifiListViewTopPadding"
+            android:background="@drawable/dm_lib_wifi_edittext_group_bg"
+            android:orientation="vertical" >
+
+            <com.dm.xunlei.udisk.Network.View.EditTextButtonView
+                android:id="@+id/etbv_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_lib_wifi_EditTextHeight" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_lib_wifi_DivideLineHeight"
+                android:background="@color/dm_lib_wifi_divide" />
+
+            <com.dm.xunlei.udisk.Network.View.EditTextButtonView
+                android:id="@+id/etbv_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_lib_wifi_EditTextHeight" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/dm_lib_wifi_SettingNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginRight="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginTop="@dimen/dm_lib_wifi_SettingNoteMarginTop"
+            android:text="@string/DM_Set_SecureVault_setting_tips" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginTop="@dimen/dm_lib_wifi_SettingNoteMarginTop"
+            android:text="@string/DM_Set_SecureVault_Password_Hint"
+            android:textColor="@color/dm_lib_wifi_setting_textview_color"
+            android:textSize="@dimen/dm_lib_wifi_RightTextTitleTextSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginRight="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginTop="@dimen/dm_lib_wifi_WifiListViewTopPadding"
+            android:background="@drawable/dm_lib_wifi_edittext_group_bg"
+            android:orientation="vertical" >
+
+            <com.dm.xunlei.udisk.Network.View.EditTextButtonView
+                android:id="@+id/etbv_password_tips"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm_lib_wifi_EditTextHeight" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_vault_save"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/backup_btn_bg_selector"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="@string/DM_SetUI_Complete"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

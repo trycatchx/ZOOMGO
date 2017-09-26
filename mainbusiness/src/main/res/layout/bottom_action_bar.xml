@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_action_bar"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="@drawable/folderselector_bkg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/op_download"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/download_btn_selector"
+        android:gravity="center"
+        android:text="@string/DM_Task_Download_Mobile"
+        android:textColor="@drawable/guide_text_selector"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/op_cpTo"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/cp_btn_selector"
+        android:gravity="center"
+        android:text="@string/DM_Task_Copy"
+        android:textColor="@drawable/guide_text_selector"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/op_delete"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/delete_btn_selector"
+        android:gravity="center"
+        android:text="@string/DM_Task_Delete"
+        android:textColor="@drawable/guide_text_selector"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/op_more"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/more_btn_selector" />
+    </LinearLayout>
+
+</LinearLayout>

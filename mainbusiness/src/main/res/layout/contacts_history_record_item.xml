@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="afterDescendants" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp" >
+
+        <ImageView
+            android:id="@+id/iv_contacts_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/contacts_backedup_icon" />
+
+        <LinearLayout
+            android:id="@+id/llyt_contacts_oper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_contacts_history_delete"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:background="@drawable/sel_contacts_history_btn"
+                android:clickable="true"
+                android:text="@string/DM_Backup_Address_Records_Delete_Button"
+                android:textColor="@color/color_contacts_history_text"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btn_contacts_history_recover"
+                android:layout_width="68dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/sel_contacts_history_btn"
+                android:clickable="true"
+                android:text="@string/DM_Backup_Address_Records_Restore_Button"
+                android:textColor="@color/color_contacts_history_text"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llyt_contacts_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv_contacts_icon"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_backup_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="sdfsdaf"
+                android:textColor="@color/color_contacts_history_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_backup_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="sdfsdaf"
+                android:textColor="@color/color_contacts_history_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_backup_phone_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="sdfsdaf"
+                android:textColor="@color/color_contacts_history_text"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/btn_date_pic_upload"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#cccccc" />
+    </RelativeLayout>
+
+</RelativeLayout>

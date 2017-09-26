@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+    
+    <TextView
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/folderselector_bkg"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:layout_gravity="bottom"
+        android:paddingTop="5dp"
+        android:text="@string/DM_Control_Definite"
+        android:textColor="@drawable/airdisk_dialog_btn_textcolor_selector"
+        android:textSize="@dimen/airdisk_dialog_button_textsize" />
+
+    
+
+</FrameLayout>

@@ -1,0 +1,49 @@
+{
+    "status": {
+        "msg": "ok",
+        "ret": 1
+    },
+    "menuList": [
+        {
+            "id": 1,
+            "fid":0,
+            "link": "",
+            "linktype": "1",
+            "path": "",
+            "text": [
+              "Getting Started"
+            ]
+        },
+        {
+            "id": 2,
+            "fid": 0,
+            "link": "",
+            "linktype": "1",
+            "path": "",
+            "text": [
+                "Configuring Wi-Fi"
+            ]
+        },
+        {
+            "id": 3,
+            "fid": 0,
+            "link": "",
+            "linktype": "1",
+            "path": "",
+            "text":[
+                "General Use"
+                ]
+        },
+        {
+            "id": 4,
+            "fid": 0,
+            "link": "",
+            "linktype": "1",
+            "path": "",
+            "text":[
+                "PC/Mac Sharing"
+            ]
+        }
+     ]
+}
+ 

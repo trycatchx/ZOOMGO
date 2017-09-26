@@ -1,0 +1,311 @@
+{
+    "status":{
+        "msg":"ok",
+        "ret":1
+    },
+    "menuList":[
+        {
+            "fid":100,
+            "question":"Powering the ZoomGo Media Stick",
+            "answer":[
+                {
+                    "type":"text",
+                    "data":"In a car, truck, RV, or other vehicle:"
+                },
+                {
+                    "type":"text",
+                    "data":"Insert the ZoomGo Media Stick into the 12/24 V power socket in your vehicle"
+                },
+                {
+                    "type":"text",
+                    "data":"</br>"
+                },
+                {
+                    "type":"text",
+                    "data":"At home or on the go:"
+                },
+                {
+                    "type":"text",
+                    "data":"Connect the ZoomGo Media Stick to a Micro USB cable from either a wall charger, power bank or computer. Please note, when connected via Micro USB, the USB ports on the Stick will not be powered."
+                },
+                {
+                    "type":"text",
+                    "data":"</br>"
+                },
+                {
+                    "type":"text",
+                    "data":"The LED indicator light will illuminate when the stick is powered. The LED flashes during WiFi activity."
+                }
+            ]
+        },
+        {
+            "fid":101,
+            "question":"Using the app",
+            "answer":[
+                {
+                    "type":"image",
+                    "src":"app_home_diagram.png"
+                },
+                {
+                    "type":"image",
+                    "src":"app_home_menu_diagram.png"
+                }
+            ]
+        },
+		{
+            "fid":102,
+            "question":"Video player controls",
+            "answer":[
+                {
+                    "type":"image",
+                    "src":"iOS_video_player_diagram.png"
+                },
+                {
+                    "type":"image",
+                    "src":"Android_video_player_diagram.png"
+                }
+            ]
+        },
+        {
+            "fid":200,
+            "question":"Set Wi-Fi name and password",
+            "answer":[
+                {
+                    "type":"image",
+                    "src":"access_settings_menu_diagram.png"
+                }
+            ]
+        },
+        {
+            "fid":201,
+            "question":"Internet connection",
+            "answer":[
+                {
+                    "type":"image",
+                    "src":"internet_config_diagram.png"
+                }
+            ]
+        },
+        {
+            "fid":202,
+            "question":"Connecting to a hidden network",
+            "answer":[
+                {
+                    "type":"image",
+                    "src":"hidden_ssid_internet_config_diagram.png"
+                }
+            ]
+        },
+        {
+            "fid":300,
+            "question":"Using mobile data when connected to ZoomGo",
+            "answer":[
+                {
+                    "type":"text",
+                    "data":"If you are using an Android device with a cellular data connection, due to an operating system limitation, you cannot use mobile data while you are connected to ZoomGo. To use mobile data, please disconnect from ZoomGo Wi-Fi."
+                },
+                {
+                    "type":"text",
+                    "data":"</br>"
+                },
+                {
+                    "type":"text",
+                    "data":" This does not affect iOS devices."
+                }
+            ]
+        },
+        {
+            "fid":301,
+            "question":"Supported file types",
+            "answer":[
+                {
+                    "type":"text",
+                    "data":"Video (Android)-3GP, AVI, FLV, MKV, MOV, MP4,"
+                },
+                {
+                    "type":"text",
+                    "data":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MPG, RM, RMVB, WMV"
+                },
+                {
+                    "type":"text",
+                    "data":"Video (iOS)-M4V, MP4, MOV"
+                },
+                {
+                    "type":"text",
+                    "data":"Audio-AAC,M4A,AC3,APE,FLAC,M4R,MP3,OGG"
+                },
+                {
+                    "type":"text",
+                    "data":"Image-BMP, GIF, JPG, PNG, ICO"
+                },
+                {
+                    "type":"text",
+                    "data":"Documents-TXT, PDF, DOC/DOCX (Word),"
+                },
+                {
+                    "type":"text",
+                    "data":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PPT/PPTX (PowerPoint), XLS/XLSX (Excel)"
+                }
+            ]
+        },
+        {
+            "fid":302,
+            "question":"Adding custom subtitles",
+            "answer":[
+                {
+                    "type":"text",
+                    "data":"If you want to import your own subtitles, you can copy the .srt file into the same folder as the video, and change the filename to match, e.g. subtitles for the file Movie.mp4 should be called Movie.srt and placed in the same folder."
+                },
+                {
+                    "type":"text",
+                    "data":"</br>"
+                },
+                {
+                    "type":"text",
+                    "data":"Now you can open the video, tap on the subtitle icon in the bottom right of the video player and switch on your custom subtitles."
+                }
+            ]
+        },
+        {
+            "fid":303,
+            "question":"Local albums or pictures not appearing",
+            "answer":[
+                {
+                    "type":"text",
+                    "data":"Please make sure you have set the correct app permissions. You should allow ZoomGo Media to access your photo libraries."
+                },
+                {
+                    "type":"text",
+                    "data":"</br>"
+                },
+                {
+                    "type":"text",
+                    "data":"For iOS devices, make sure the Optimize Storage setting is disabled in the Photos app’s settings. If this is enabled, older photos are uploaded to iCloud and deleted from the device, so they cannot be viewed within ZoomGo Media."
+                }
+            ]
+        },
+        {
+            "fid":304,
+            "question":"File size limitations (FAT32)",
+            "answer":[
+                {
+                    "type":"text",
+                    "data":"Your microSD card will come formatted from the factory. Some cards may be preformatted in the FAT32 format. This older format has a maximum individual file size of 4GB, so some larger media files will not copy onto the card."
+                },
+                {
+                    "type":"text",
+                    "data":"</br>"
+                },
+                {
+                    "type":"text",
+                    "data":"To fix this, you should reformat your microSD card to the exFAT format using your computer. Please note, all content on the microSD card will be erased during this process."
+                }
+            ]
+        },
+        {
+            "fid":305,
+            "question":"System update",
+            "answer":[
+                {
+                    "type":"text",
+                    "data":"In the Settings menu in ZoomGo Media, you can check for both app and firmware updates. The app should update automatically from your device’s app store."
+                },
+                {
+                    "type":"text",
+                    "data":"</br>"
+                },
+                {
+                    "type":"text",
+                    "data":"Every now and again, we may release an updated firmware version to improve the performance of the ZoomGo Media Stick. If you connect the ZoomGo Media Stick to your home Wi-Fi connection, you can check if there’s an update for it."
+                }
+            ]
+        },
+        {
+            "fid":306,
+            "question":"Best practices",
+            "answer":[
+                {
+                    "type":"text",
+                    "data":"Do not unplug the ZoomGo Media Stick whilst the LED indicator light is flashing"
+                }
+                
+            ]
+        },
+		 {
+            "fid":307,
+            "question":"Factory reset and defaults",
+            "answer":[
+                {
+                    "type":"text",
+                    "data":"If you forget the ZoomGo Wi-Fi password, or want to reset the ZoomGo Media Stick for any other reason, you can restore it to factory settings.You can do this using a computer."
+                },
+				{
+                    "type":"text",
+                    "data":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Insert the MicroSD card into your computer."
+                },
+				{
+                    "type":"text",
+                    "data":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Open the MicroSD card \- you should see a list of files and folders."
+                },
+				{
+                    "type":"text",
+                    "data":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Create a new text file using Notepad (Windows) or TextEdit (Mac) and save the file on the MicroSD card."
+                },
+				
+				{
+                    "type":"text",
+                    "data":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Rename the file to $$reset$$.bin"
+                },
+				{
+                    "type":"text",
+                    "data":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Eject the MicroSD card and remove it from your computer."
+                },
+				{
+                    "type":"text",
+                    "data":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6. Insert the MicroSD card into the ZoomGo Media Stick and power it on."
+                },
+				{
+                    "type":"text",
+                    "data":"</br>"
+                },
+				{
+                    "type":"text",
+                    "data":"The system will now reset to factory default settings. The contents of the MicroSD card are unaffected."
+                },
+				{
+                    "type":"text",
+                    "data":"</br>"
+                },
+				{
+                    "type":"text",
+                    "data":"Default Wi-Fi name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ZoomGo_xxxxxx"
+                },
+				{
+                    "type":"text",
+                    "data":"Default Wi-Fi password :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12345678"
+                }
+                
+            ]
+        },
+        {
+            "fid":400,
+            "question":"Set up a Samba share (Windows)",
+            "answer":[
+                {
+                    "type":"image",
+                    "src":"samba_windows_diagram.png"
+                }
+            ]
+        },
+        {
+            "fid":401,
+            "question":"Set up a Samba share (Mac)",
+            "answer":[
+                {
+                    "type":"image",
+                    "src":"samba_mac_diagram.png"
+                }
+            ]
+        }
+    ]
+}

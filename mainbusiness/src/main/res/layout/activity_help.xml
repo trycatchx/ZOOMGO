@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dm_lib_wifi_SettingActivityBody" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/dm_lib_wifi_setting_title" >
+        </include>
+    </LinearLayout>
+
+    <TextView
+        style="@style/help_step_title_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/DM_MDNS_how_to_check_0"
+        android:textColor="@color/dm_lib_wifi_setting_textview_color"
+        android:textSize="@dimen/dm_lib_wifi_DavInfoMessageTextSize" />
+
+
+    <TextView
+        style="@style/help_step_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:drawableLeft="@drawable/help_step_one"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/DM_MDNS_how_to_check_1"
+        android:textColor="@color/dm_lib_wifi_setting_textview_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/dm_lib_wifi_dotted_line"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" />
+
+    <TextView
+        style="@style/help_step_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:drawableLeft="@drawable/help_step_two"
+        android:drawablePadding="20dp"
+        android:text="@string/DM_MDNS_how_to_check_2"
+        android:textColor="@color/dm_lib_wifi_setting_textview_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/dm_lib_wifi_dotted_line"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" />
+
+    <TextView
+        style="@style/help_step_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:drawableLeft="@drawable/help_step_three"
+        android:drawablePadding="20dp"
+        android:text="@string/DM_MDNS_how_to_check_3"
+        android:textColor="@color/dm_lib_wifi_setting_textview_color"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/dm_lib_wifi_dotted_line"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" />
+
+    <TextView
+        style="@style/help_step_text_style"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:drawableLeft="@drawable/help_step_four"
+        android:drawablePadding="20dp"
+        android:text="@string/DM_MDNS_how_to_check_4"
+        android:textColor="@color/dm_lib_wifi_setting_textview_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@drawable/dm_lib_wifi_dotted_line"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" />
+
+</LinearLayout>

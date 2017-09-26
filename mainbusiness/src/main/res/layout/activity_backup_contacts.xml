@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_contacts_backup_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/llyt_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/head"
+            layout="@layout/common_title_bar" />
+    </LinearLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+
+        <TextView
+            android:id="@+id/tv_c_last_bak_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textColor="@color/dialog_progress_text"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_cur_image"
+            android:layout_width="90dp"
+            android:layout_height="78dp"
+            android:layout_below="@id/tv_c_last_bak_time"
+            android:layout_centerHorizontal="true"
+            android:baselineAlignBottom="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/contacts_backup_logo" />
+
+        <RelativeLayout
+            android:id="@+id/rl_c_bak_below_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_cur_image"
+            android:layout_marginTop="15dp" >
+
+            <TextView
+                android:id="@+id/tv_c_below_text_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text=""
+                android:textColor="@color/dialog_progress_text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_c_below_text_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_c_below_text_up"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/dialog_progress_text"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_date_pic_upload"
+            android:layout_width="208dp"
+            android:layout_height="38dp"
+            android:layout_below="@id/rl_c_bak_below_text"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/disk_backup_media_setting_button_bg_normal"
+            android:padding="5dp"
+            android:text="@string/DM_Backup_Start_Button"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+        <View
+            android:layout_below="@id/btn_date_pic_upload"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#cccccc"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyt_contacts_backup"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/sel_phone_backup_item"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+              android:layout_marginLeft="8dp"  
+              android:layout_marginRight="8dp"  >
+
+        <TextView
+            android:id="@+id/tv_contacts_backup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+         	android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:layout_marginLeft="13dp"
+            android:text="@string/DM_Backup_Address_Records_Title"
+            android:textColor="@color/DM_title_text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:src="@drawable/date_updateload_to"
+            android:layout_marginRight="8dp" />
+    </RelativeLayout>
+  </LinearLayout>
+  </ScrollView>
+</LinearLayout>

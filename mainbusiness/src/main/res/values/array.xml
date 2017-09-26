@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Fm_Single_File_Choosed">
+        <item>第三方应用打开</item>
+        <item>分享到</item>
+        <item>重命名</item>
+        <item>详情</item>
+    </string-array>
+    <string-array name="Fm_Single_Dir_Choosed">
+        <item>重命名</item>
+        <item>详情</item>
+    </string-array>
+    <string-array name="Fm_Multi_File_Choosed">
+        <item>详情</item>
+    </string-array>
+
+    <color name="ball1">#FFD91C</color>
+    <color name="ball2">#FF4B4A</color>
+    <color name="ball3">#3D8EFF</color>
+
+    <integer-array name="colors">
+        <item>@color/ball1</item>
+        <item>@color/ball2</item>
+        <item>@color/ball3</item>
+    </integer-array>
+
+</resources>

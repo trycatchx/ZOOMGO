@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="title_ico_padding">12dp</dimen>
+    <dimen name="dm_lib_image_TitleHeight">48dp</dimen>
+    <dimen name="dm_lib_image_LeftIconTitleMarginLeft">18dp</dimen>
+    <dimen name="airdisk_dialog_attribute_item_margin_right">10dp</dimen>
+    <dimen name="airdisk_dialog_attribute_item_margin_top_multiply2">16dp</dimen>
+    <dimen name="EntryBorderWidth">2px</dimen>
+    
+</resources>

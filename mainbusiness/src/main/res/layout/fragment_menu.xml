@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/iv_layout_menu_device_icon"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/zoom_gon_media_icon" />
+
+    <LinearLayout
+        android:id="@+id/device_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_layout_menu_device_icon"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:id="@+id/layout_device_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/device_ssid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="airdisk_0123456"
+                android:textColor="@color/color_sliding_menu_text"
+                android:textSize="13sp" />
+
+            <ProgressBar
+                android:id="@+id/device_storage_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dm_lib_wifi_ProgressBarHeight"
+                android:layout_below="@id/device_ssid"
+                android:layout_marginTop="5dp"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/storage_progress" />
+
+            <RelativeLayout
+                android:id="@+id/layout_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/device_storage_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="0G/0G"
+                    android:textColor="@color/color_sliding_menu_text"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/device_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/power_5"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_layout_menu_cur_devive_ssid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/DM_Remind_Notconnect_Device"
+            android:textColor="@color/color_sliding_menu_text"
+            android:textSize="13sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!--设置-->
+    <RelativeLayout
+        android:id="@+id/rlyt_layout_menu_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:clickable="true"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/flyt_layout_menu_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true">
+
+            <ImageView
+                android:id="@+id/iv_layout_new_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right|top"
+                android:clickable="true"
+                android:src="@drawable/new_versionnotify_middle"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_layout_menu_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:duplicateParentState="true"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="3dp"
+                android:paddingTop="2dp"
+                android:src="@drawable/sliding_menu_setting_selector" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/flyt_layout_menu_setting"
+            android:paddingBottom="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/DM_Sidebar_Set"
+            android:textColor="@color/color_sliding_menu_text"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dividing_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/rlyt_layout_menu_setting"
+        android:layout_marginLeft="20dp"
+        android:background="@color/color_sliding_menu_item_bg_pressed"
+        android:visibility="visible" />
+    <!--版本号-->
+    <RelativeLayout
+        android:id="@+id/rlyt_version_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_above="@+id/dividing_line"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_set_app_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:text="0.0.0"
+            android:textColor="@color/color_sliding_menu_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:text="0.0.0"
+            android:id="@+id/tv_set_fw_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_set_app_ver"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/color_sliding_menu_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_set_device_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_set_fw_ver"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/color_sliding_menu_text"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_layout_menu_line"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/device_info"
+        android:layout_marginLeft="20dp"
+        android:background="#dcddda" />
+
+    <!-- 三個item -->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    android:layout_below="@id/v_layout_menu_line"
+    android:layout_above="@id/rlyt_version_code">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- wifi -->
+
+        <RelativeLayout
+            android:id="@+id/rlyt_layout_menu_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sliding_menu_item_seletor"
+            android:clickable="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp">
+
+            <ImageView
+                android:id="@+id/one"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/sliding_menu_item_wifi" />
+
+            <TextView
+                android:id="@+id/tv_layout_menu_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/one"
+                android:singleLine="true"
+                android:text="@string/DM_Siderbar_WiFi_Connect"
+                android:textColor="@color/color_sliding_menu_text"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/slinding_menu_item_icon" />
+
+            <TextView
+                android:id="@+id/tv_layout_menu_wifi_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/arrow"
+                android:layout_toRightOf="@id/tv_layout_menu_wifi"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/color_sliding_sub_menu_text"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_sliding_menu_item_bg_pressed" />
+
+        <!-- network -->
+
+
+        <!-- wifi -->
+
+        <RelativeLayout
+            android:id="@+id/rlyt_layout_menu_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sliding_menu_item_seletor"
+            android:clickable="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/two"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/sliding_menu_item_network" />
+
+            <TextView
+                android:id="@+id/tv_layout_menu_wifi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/two"
+                android:singleLine="true"
+                android:text="@string/DM_Wi_FiSet_Section_Row_1"
+                android:textColor="@color/color_sliding_menu_text"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/arrow2"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/slinding_menu_item_icon" />
+
+            <TextView
+                android:id="@+id/tv_layout_menu_network_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/arrow2"
+                android:layout_toRightOf="@id/tv_layout_menu_wifi_text"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/color_sliding_sub_menu_text"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/devided_network"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_sliding_menu_item_bg_pressed"
+            android:visibility="gone" />
+
+        <!-- backUp -->
+
+        <RelativeLayout
+            android:id="@+id/rlyt_layout_menu_backup_manual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sliding_menu_item_seletor"
+            android:clickable="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_backup_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/sliding_menu_item_backup" />
+
+            <TextView
+                android:id="@+id/tv_layout_menu_phone_backup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_backup_icon"
+                android:duplicateParentState="true"
+                android:text="@string/DM_Sidebar_PhoneBackup"
+                android:textColor="@drawable/sliding_menu_text_color_selector"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/tv_layout_menu_phone_backup"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/slinding_menu_item_icon" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlyt_layout_menu_backup_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sliding_menu_item_seletor"
+            android:clickable="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_backup_icon_auto"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/sliding_menu_item_backup" />
+
+            <TextView
+                android:id="@+id/tv_layout_menu_phone_backup_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_backup_icon_auto"
+                android:duplicateParentState="true"
+                android:text="@string/DM_Sidebar_PhoneBackup"
+                android:textColor="@drawable/sliding_menu_text_color_selector"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/tv_layout_menu_phone_backup_auto"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/baking"
+                    style="@android:style/Widget.ProgressBar"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="15dp"
+                    android:indeterminate="false"
+                    android:indeterminateDrawable="@drawable/backing_anim"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/slinding_menu_item_icon" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_sliding_menu_item_bg_pressed" />
+
+        <!-- download -->
+
+        <RelativeLayout
+            android:id="@+id/rlyt_layout_menu_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sliding_menu_item_seletor"
+            android:clickable="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp">
+
+            <ImageView
+                android:id="@+id/ota"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/sliding_menu_item_download" />
+
+            <TextView
+                android:id="@+id/tv_layout_menu_download_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/ota"
+                android:duplicateParentState="true"
+                android:text="@string/DM_Sidebar_MyDownloads"
+                android:textColor="@drawable/sliding_menu_text_color_selector"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/tv_layout_menu_download_text"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/slinding_menu_item_icon" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_sliding_menu_item_bg_pressed" />
+
+        <!-- dropbox 网络云盘 -->
+
+        <RelativeLayout
+            android:id="@+id/rlyt_layout_menu_dropbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sliding_menu_item_seletor"
+            android:clickable="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/dropbox"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/sliding_menu_item_dropbox" />
+
+            <TextView
+                android:id="@+id/tv_layout_menu_dropbox_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/dropbox"
+                android:duplicateParentState="true"
+                android:text="@string/DM_Sidebar_DropBox"
+                android:textColor="@drawable/sliding_menu_text_color_selector"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/tv_layout_menu_dropbox_text"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/slinding_menu_item_icon" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_sliding_menu_item_bg_pressed" />
+
+        <!-- 保险柜 -->
+        <RelativeLayout
+            android:id="@+id/rlyt_layout_menu_vault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sliding_menu_item_seletor"
+            android:clickable="true"
+            android:paddingLeft="25dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/vault"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/sliding_menu_item_vault" />
+
+            <TextView
+                android:id="@+id/tv_layout_menu_vault_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/vault"
+                android:duplicateParentState="true"
+                android:text="@string/DM_Set_SecureVault"
+                android:textColor="@drawable/sliding_menu_text_color_selector"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/tv_layout_menu_vault_text"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/slinding_menu_item_icon" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_sliding_menu_item_bg_pressed" />
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+</RelativeLayout>

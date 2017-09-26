@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blacktransparent">#b4000000</color>
+    <color name="whitetransparent">#b4ffffff</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="black">#000001</color>
+    <color name="white">#ffffff</color>
+
+    <color name="orange500transparent">#ff3399ff</color>
+    <color name="grey400transparent">#4cffffff</color>
+    <color name="grey900transparent">#80212121</color>
+
+    <color name="vod_player_seekbar_front">#ff3399ff</color>
+    <color name="vod_player_seekbar_back">#CC555555</color>
+    <color name="vod_player_seekbar_second">#4cffffff</color>
+
+    <color name="orange50">#fff3e0</color>
+    <color name="orange100">#ffdfae</color>
+    <color name="orange200">#ffca7d</color>
+    <color name="orange300">#ffb54c</color>
+    <color name="orange400">#ffa11a</color>
+    <color name="orange500">#ff8800</color>
+    <color name="orange600">#ff7d00</color>
+    <color name="orange700">#ff7200</color>
+    <color name="orange800">#ff610a</color>
+    <color name="orange900">#ff5014</color>
+    <color name="vod_player_srt_pressed">#66CADAD6</color>
+    <color name="vod_player_srt_selected">#81BC27</color>
+    <color name="vod_player_text_white">#ffffff</color>
+    <color name="vod_player_main_blue">#0086D1</color>
+
+</resources>

@@ -1,0 +1,168 @@
+{
+    "status":{
+        "msg":"ok",
+        "ret":1
+     },
+     "menuList":[
+          {
+            "id":100,
+            "fid":1,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                 "Powering the ZoomGo Media Stick"
+            ]
+         },
+         {
+            "id":101,
+            "fid":1,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Using the app"
+            ]
+        },
+         {
+            "id":102,
+            "fid":1,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Video player controls"
+            ]
+        },
+        {
+            "id":200,
+            "fid":2,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Set Wi-Fi name and password"
+            ]
+        },
+        {
+            "id":201,
+            "fid":2,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Internet connection"
+            ]
+        },
+        {
+            "id":202,
+            "fid":2,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Connecting to a hidden network"
+            ]
+        },
+        {
+            "id":300,
+            "fid":3,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Using mobile data when connected to ZoomGo"
+            ]
+        },
+        {
+            "id":301,
+            "fid":3,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Supported file types"
+            ]
+        },
+        {
+            "id":302,
+            "fid":3,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Adding custom subtitles"
+            ]
+        },
+        {
+            "id":303,
+            "fid":3,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Local albums or pictures not appearing"
+            ]
+        },
+        {
+            "id":304,
+            "fid":3,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "File size limitations (FAT32)"
+            ]
+        },
+        {
+            "id":305,
+            "fid":3,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "System update"
+            ]
+        },
+        {
+            "id":306,
+            "fid":3,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Best practices"
+            ]
+        },
+		{
+            "id":307,
+            "fid":3,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Factory reset and defaults"
+            ]
+        },
+        {
+            "id":400,
+            "fid":4,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Set up a Samba share (Windows)"
+            ]
+        },
+        {
+            "id":401,
+            "fid":4,
+            "link":"./json/menu_item_list.json",
+            "linktype":"2",
+            "path":"",
+            "text":[
+                "Set up a Samba share (Mac)"
+            ]
+        }
+    ]
+}

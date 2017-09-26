@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"  
+    >
+   <com.dmsys.airdiskpro.ui.imagereader.ImageViewPager
+    android:id="@+id/pager"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" />    
+    
+    <LinearLayout 
+       android:id="@+id/rlImageInfoBar"
+     	android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 
+    	android:layout_gravity="top"
+    	android:clickable="true"       
+       >
+       <include layout="@layout/image_title"></include>
+   </LinearLayout>
+   
+    <LinearLayout 
+       android:id="@+id/llyt_image_bottom_bar"
+     	android:layout_width="match_parent"
+    	android:layout_height="wrap_content" 
+    	android:layout_gravity="bottom"
+    	android:clickable="true"  
+    	android:focusableInTouchMode="true"    
+    	android:focusable="true"   
+       >
+       <include layout="@layout/image_bottom_bar"></include>
+   </LinearLayout>
+   
+   
+</FrameLayout>
+

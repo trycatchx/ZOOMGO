@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 21
+        versionName "1.0.6.21"
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs','../vlcplayer/libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v13:25.3.1'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.2.7'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.squareup.okhttp:okhttp:2.7.4'
+    compile 'com.squareup.okio:okio:1.6.0'
+    compile(name: 'adupgrade', ext: 'aar')
+    compile(name: 'aodplayer', ext: 'aar')
+    compile(name: 'dmbaselib', ext: 'aar')
+    compile(name: 'dmdropbox', ext: 'aar')
+    compile(name: 'dmimageloader', ext: 'aar')
+    compile(name: 'dmsdk', ext: 'aar')
+    compile(name: 'dmshare', ext: 'aar')
+    compile(name: 'dmsoftwareupgrade', ext: 'aar')
+    compile(name: 'feedback', ext: 'aar')
+    compile(name: 'ffmpegmetadataretriever', ext: 'aar')
+    compile(name: 'libjpeg', ext: 'aar')
+    compile(name: 'library', ext: 'aar')
+    compile(name: 'network', ext: 'aar')
+    compile(name: 'pulltorefreshlibrary', ext: 'aar')
+    compile(name: 'slidingmenulib', ext: 'aar')
+    compile(name: 'stickylistheaders', ext: 'aar')
+    compile(name: 'txtviewer', ext: 'aar')
+    compile(name: 'wificonnect', ext: 'aar')
+    compile project(':vlcplayer')
+}

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dmsys.airdiskpro.view.PicLineLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:id="@+id/ll_line">
+
+    <TextView
+        android:id="@+id/tv_line_date"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/image_group_title"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_line_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+      >
+
+        <RelativeLayout
+            android:id="@+id/rl_line_picitem0"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+           >
+
+            <com.dmsys.airdiskpro.view.PicImageView
+                android:id="@+id/piv_line_icon0"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:baselineAlignBottom="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/filemanager_photo_default" />
+
+            <ImageView
+                android:id="@+id/iv_line_operatinobtn0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:clickable="false"
+                android:background="@drawable/setting_file_manager_pic_selector"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+             />
+
+        <RelativeLayout
+            android:id="@+id/rl_line_picitem1"
+             android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            >
+
+            <com.dmsys.airdiskpro.view.PicImageView
+                android:id="@+id/piv_line_icon1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:baselineAlignBottom="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/filemanager_photo_default" />
+
+            <ImageView
+                android:id="@+id/iv_line_operatinobtn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:clickable="false"
+                android:background="@drawable/setting_file_manager_pic_selector"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+             />
+
+        <RelativeLayout
+            android:id="@+id/rl_line_picitem2"
+             android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+          >
+
+            <com.dmsys.airdiskpro.view.PicImageView
+                android:id="@+id/piv_line_icon2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:baselineAlignBottom="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/filemanager_photo_default" />
+
+            <ImageView
+                android:id="@+id/iv_line_operatinobtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:clickable="false"
+                android:background="@drawable/setting_file_manager_pic_selector"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+             />
+
+        <RelativeLayout
+            android:id="@+id/rl_line_picitem3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            >
+
+            <com.dmsys.airdiskpro.view.PicImageView
+                android:id="@+id/piv_line_icon3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:baselineAlignBottom="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/filemanager_photo_default" />
+
+            <ImageView
+                android:id="@+id/iv_line_operatinobtn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:clickable="false"
+                android:background="@drawable/setting_file_manager_pic_selector"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.dmsys.airdiskpro.view.PicLineLayout>

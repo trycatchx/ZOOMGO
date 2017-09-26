@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dm_lib_wifi_SettingActivityBody" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/dm_lib_wifi_setting_title" >
+        </include>
+    </LinearLayout>
+
+    <!-- 设备状态信息 -->
+
+    <LinearLayout
+        android:id="@+id/llyt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginRight="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginTop="@dimen/dm_lib_wifi_WifiListViewTopPadding"
+            android:background="@drawable/settings_group_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/EntryBorderWidth" >
+
+            <RelativeLayout
+                android:id="@+id/rlty_sett_info"
+                style="@style/SettingCell"
+                android:layout_marginTop="@dimen/EntryBorderWidth"
+                android:background="@drawable/dm_lib_dialog_btn_roundcornor" >
+
+                <TextView
+                    android:id="@+id/bt_sett_info"
+                    style="@style/SettingTitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/DM_Setting_Secure_Access_Passsword" />
+
+                <ImageView
+                    android:id="@+id/iv_device_password_icon"
+                    style="@style/SettingRightButton"
+                    android:src="@drawable/go_selector" />
+
+                <TextView
+                    android:id="@+id/tv_device_statu"
+                    style="@style/SettingSubTitle"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_device_password_icon"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:text="" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/dm_lib_wifi_SettingNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginTop="@dimen/dm_lib_wifi_SettingNoteMarginTop"
+            android:text="@string/DM_Access_Password_Set_Caption" />
+    </LinearLayout>
+
+    <!-- 保险库 -->
+
+    <LinearLayout
+        android:id="@+id/llyt_vault"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginRight="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginTop="@dimen/dm_lib_wifi_WifiListViewTopPadding"
+            android:background="@drawable/settings_group_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/EntryBorderWidth" >
+
+            <RelativeLayout
+                android:id="@+id/rlyt_vault_setting"
+                style="@style/SettingCell"
+                android:layout_marginTop="@dimen/EntryBorderWidth"
+                android:background="@drawable/dm_lib_dialog_btn_roundcornor" >
+
+                <TextView
+                    android:id="@+id/tv_vault_setting"
+                    style="@style/SettingTitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/DM_Set_SecureVault" />
+
+                <ImageView
+                    android:id="@+id/iv_vault_settingicon"
+                    style="@style/SettingRightButton"
+                    android:src="@drawable/go_selector" />
+
+                <TextView
+                    android:id="@+id/tv_vault_statu"
+                    style="@style/SettingSubTitle"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_vault_settingicon"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:text="" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/dm_lib_wifi_SettingNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm_lib_wifi_WifiListViewRightPadding"
+            android:layout_marginTop="@dimen/dm_lib_wifi_SettingNoteMarginTop"
+            android:text="@string/DM_Set_SecureVault_Caption" />
+    </LinearLayout>
+
+</LinearLayout>

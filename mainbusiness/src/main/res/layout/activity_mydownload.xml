@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/op_delete"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/folderselector_bkg"
+        android:drawableTop="@drawable/delete_btn_selector"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp"
+        android:visibility="gone"
+        android:text="@string/DM_Task_Delete"
+        android:textColor="@drawable/guide_text_selector"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/op_delete"
+        android:orientation="vertical" />
+
+</RelativeLayout>

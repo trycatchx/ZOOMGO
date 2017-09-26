@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 21
+        versionName "1.0.6.21"
+
+//        multiDexEnabled true
+    }
+
+
+    packagingOptions {
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/armeabi/libc++_shared.so'
+    }
+
+
+
+}
+
+
+
+repositories{
+    flatDir{
+        dirs 'libs'
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.2.7'
+    compile(name: 'medialibrary', ext: 'aar')
+    compile(name: 'libvlc-3.0.0-null', ext: 'aar')
+    compile(name: 'dmsdk', ext: 'aar')
+
+}
